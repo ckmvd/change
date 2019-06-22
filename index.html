@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    #dv{width: 100px;height: 100px;background-color: #ff0000;position: absolute}
+</style>
+</head>
+</body>
+<div id="dv"></div>
+<script>
+let dv,seep,flag;   
+init()
+function init(){
+    seep=0;
+    flag=true
+    dv=document.getElementById('dv');
+    setInterval(animate,20);
+    dv.addEventListener('click',clickHandler);
+}
+function animate(){
+    if(!flag){
+        seep+=1;
+        dv.style.left=seep+'px';
+    }
+}
+function clickHandler(){
+    flag=!flag
+}
+
+
+// var seep=0;
+// var flag=true;
+// var dv=document.getElementById('dv');
+// setInterval(function(){
+//     if(flag){
+//         seep+=2;
+//         dv.style.left=seep+'px';
+//     }
+// },20);
+// dv.onclick=function(){
+//     flag=!flag
+// }
+</script>
+</body>
+</html>
